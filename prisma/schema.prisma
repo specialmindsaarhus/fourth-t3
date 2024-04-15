@@ -15,8 +15,10 @@ model Post {
     id        Int      @id @default(autoincrement())
     name      String
     lastname  String
+    phone     Int
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
 
     @@index([name])
 }
+
