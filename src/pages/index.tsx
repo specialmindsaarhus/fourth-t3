@@ -12,6 +12,8 @@ export default function Home() {
 
   const user = useUser()
 
+  console.log(hello.data)
+
   return (
     <>
       <Head>
@@ -20,7 +22,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <nav className="bg-transparent absolute w-screen flex">
-        <div className="me-2 ms-auto my-2">
+        <div className="me-2 ms-auto my-2 text-white">
           {!!user.isSignedIn && <SignOutButton />}
           {!user.isSignedIn && <SignInButton />}
         </div>
