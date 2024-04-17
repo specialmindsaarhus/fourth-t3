@@ -1,6 +1,8 @@
 import { authMiddleware } from "@clerk/nextjs";
 
-export default authMiddleware({});
+export default authMiddleware({
+  publicRoutes: ["/", "/contact"],
+});
 console.log("middelware running...!!")
 
 export const config = {

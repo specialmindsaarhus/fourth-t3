@@ -8,11 +8,10 @@ import { SignInButton, SignOutButton, UserButton, useUser } from "@clerk/nextjs"
 
 
 export default function Home() {
-  const hello = api.post.hello.useQuery({ text: "from tRPC" });
-
   const user = useUser()
+  const hello = api.post.hello.useQuery({ text: "from tRPC" });
+  const {data} = api.post.getAll.useQuery()
 
-  console.log(hello.data)
 
   return (
     <>
@@ -22,10 +21,23 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <nav className="bg-transparent absolute w-screen flex">
-        <div className="me-2 ms-auto my-2 text-white">
-          {!!user.isSignedIn && <SignOutButton />}
-          {!user.isSignedIn && <SignInButton />}
-        </div>
+          {
+            !!user.isSignedIn &&
+              <>
+                <div className="text-white ms-2 me-auto my-2">
+                  <span> Velkommen {user.user.username}
+                  </span>
+                </div>
+                <div className="me-2 ms-auto my-2 text-white">
+                  <SignOutButton />
+                </div>
+              </>
+          } 
+          {!user.isSignedIn && 
+            <div className="me-2 ms-auto my-2 text-white">
+              <SignInButton />
+            </div>
+          }
       </nav>
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
         <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
