@@ -15,7 +15,7 @@ model Post {
     id        String     @id @default(cuid())
     createdAt DateTime @default(now())
     name    String
-    content String @db.VarChar(255)
+    content String //@db.VarChar(255)
     autherId String
 
     @@index([autherId])
