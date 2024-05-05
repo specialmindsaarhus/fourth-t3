@@ -46,9 +46,9 @@ export default function Home() {
         <div className="text-white flex-row flex w-full justify-center space-x-12">
           {
             data?.map((item)=>{
-              return <div className="flex flex-col justify-center">
-                  <p key={item.id} className="my-2">{item.name}</p>
-                  <span className="text-center">
+              return <div key={item.id} className="flex flex-col justify-center">
+                  <p  className="my-2">{item.name}</p>
+                  <span  className="text-center">
                     {item.content}
                   </span>
               </div>
