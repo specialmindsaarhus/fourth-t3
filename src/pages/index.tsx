@@ -43,10 +43,15 @@ export default function Home() {
           }
       </nav>
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
-        <div className="text-white">
+        <div className="text-white flex-row flex w-full justify-center space-x-12">
           {
             data?.map((item)=>{
-              return <p key={item.id}>{item.name}</p>
+              return <div className="flex flex-col justify-center">
+                  <p key={item.id} className="my-2">{item.name}</p>
+                  <span className="text-center">
+                    {item.content}
+                  </span>
+              </div>
             })
           }
         </div>
