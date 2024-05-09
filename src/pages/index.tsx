@@ -29,6 +29,7 @@ export default function Home() {
   */
   const {data} = api.post.getAll.useQuery();
   console.log(data)
+ 
   return (
     <>
       <Head>
