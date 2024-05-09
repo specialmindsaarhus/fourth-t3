@@ -11,7 +11,7 @@ const CreatePostWizard = () => {
 
   return (
   <div className="flex">
-    <img 
+    <img
       src={user.profileImageUrl} 
       alt="ProfileImage" 
       className="h-14 w-14 rounded-full"
@@ -29,7 +29,6 @@ export default function Home() {
   */
   const {data} = api.post.getAll.useQuery();
   console.log(data)
-  
   return (
     <>
       <Head>
