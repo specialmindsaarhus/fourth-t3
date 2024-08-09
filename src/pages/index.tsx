@@ -26,7 +26,13 @@ const CreatePostWizard = () => {
   );
 };
 
-export default function Home(_props) {
+/*
+note to self...
+Problemet er function Home() som eslint og prettier laver om til HOme(props) hvilket generere en build error når pushed til git og vercel
+Kan fremtidige mig fixe det?
+*/
+
+export default function Home(props/props) {
   const user = useUser();
 
   const { data } = api.post.getAll.useQuery();
