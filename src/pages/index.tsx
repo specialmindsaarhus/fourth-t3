@@ -26,7 +26,7 @@ const CreatePostWizard = () => {
   );
 };
 
-export default function Home(props) {
+export default function Home() {
   const user = useUser();
 
   const { data } = api.post.getAll.useQuery();
