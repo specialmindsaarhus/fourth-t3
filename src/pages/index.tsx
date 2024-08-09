@@ -26,11 +26,7 @@ const CreatePostWizard = () => {
   );
 };
 
-<<<<<<< HEAD
-export default function Home(props) {  //eslint-disable-line padded-blocks
-=======
-export default function Home() {
->>>>>>> 1d8c8f1ae76aad41d7fd68a3cd255f1dbc9fa463
+export default function Home(props) {
   const user = useUser();
 
   const { data } = api.post.getAll.useQuery();
