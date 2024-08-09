@@ -45,7 +45,7 @@ export default function Home(props) {
 
       <main className="flex h-screen justify-center">
         <div className="w-full  border-slate-400 md:max-w-2xl">
-          <nav className="mb-4 flex border-slate-400 p-4">
+          <nav className="mb-4 flex border-slate-400 py-4">
             {!user.isSignedIn && (
               <div className="my-2 me-2 ms-auto ">
                 <SignInButton />
@@ -56,19 +56,21 @@ export default function Home(props) {
                 <div className="my-2 me-auto ms-2">
                   <CreatePostWizard />
                 </div>
-                <div className="my-2 me-2 ms-auto">
+                <div className="my-2 me-2 ms-auto flex justify-center rounded-lg border border-slate-400 bg-slate-900 px-6 py-2">
                   <SignOutButton />
                 </div>
               </>
             )}
           </nav>
           <div className="w-full">
-            <h3 className="border-b p-8 uppercase">Development Branch</h3>
+            <h3 className=" p-8 pl-0 text-sm uppercase tracking-wide text-slate-200">
+              Development Branch
+            </h3>
             {data?.map((item) => {
               return (
                 <div
                   key={item.id}
-                  className="border-slate-400S flex border-b p-8"
+                  className="border-slate-400S mb-6 flex rounded-md bg-slate-800 p-8"
                 >
                   <span className="text-center">{item.content}</span>
                 </div>
