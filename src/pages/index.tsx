@@ -44,8 +44,8 @@ export default function Home(props) {
       </Head>
 
       <main className="flex h-screen justify-center">
-        <div className="w-full border-x border-slate-400 md:max-w-2xl">
-          <nav className="flex border-b border-slate-400 p-4">
+        <div className="w-full  border-slate-400 md:max-w-2xl">
+          <nav className="mb-4 flex border-slate-400 p-4">
             {!user.isSignedIn && (
               <div className="my-2 me-2 ms-auto ">
                 <SignInButton />
@@ -63,6 +63,7 @@ export default function Home(props) {
             )}
           </nav>
           <div className="w-full">
+            <h3 className="border-b p-8 uppercase">Development Branch</h3>
             {data?.map((item) => {
               return (
                 <div
