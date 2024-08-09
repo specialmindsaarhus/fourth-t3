@@ -28,10 +28,7 @@ const CreatePostWizard = () => {
 
 export default function Home(props) {
   const user = useUser();
-  /*
-  const hello = api.post.postList.useQuery();
-  console.log(hello)
-  */
+
   const { data } = api.post.getAll.useQuery();
   console.log(data);
 
