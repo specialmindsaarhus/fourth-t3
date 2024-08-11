@@ -32,7 +32,7 @@ Problemet er function Home() som eslint og prettier laver om til HOme(props) hvi
 Kan fremtidige mig fixe det?
 */
 
-export default function Home(props/props) {
+export default function Home() {
   const user = useUser();
 
   const { data } = api.post.getAll.useQuery();
@@ -67,7 +67,7 @@ export default function Home(props/props) {
           </nav>
           <div className="w-full">
             <h3 className=" p-8 pl-0 text-sm uppercase tracking-wide text-slate-200">
-              Development Branch
+              Development Branch New
             </h3>
             {data?.map((item) => {
               return (
