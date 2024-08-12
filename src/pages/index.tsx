@@ -73,9 +73,10 @@ export default function Home() {
               return (
                 <div
                   key={item.id}
-                  className="border-slate-400S mb-6 flex rounded-md bg-slate-800 p-8"
+                  className="border-slate-400S mb-6 flex rounded-md bg-slate-800 p-4 grid grid-cols-1 gap-y-4 "
                 >
-                  <span className="text-center">{item.content}</span>
+                  <h6 className="">{item.name}</h6>
+                  <span className="">{item.content}</span>
                 </div>
               );
             })}
